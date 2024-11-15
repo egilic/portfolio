@@ -2,14 +2,6 @@ import { Octokit } from "@octokit/rest";
 import { getDatabase, ref, get } from "firebase/database";
 import { database } from '../firebase';
 
-if (!process.env.REACT_APP_GIT_API) {
-  console.warn('GitHub API token not found in environment variables');
-}
-
-if (!process.env.REACT_APP_GIT_REPO_OWNER || !process.env.REACT_APP_GIT_REPO_NAME) {
-  console.warn('GitHub repository details not found in environment variables');
-}
-
 const octokit = new Octokit({ auth: process.env.REACT_APP_GIT_API });
 const db = getDatabase();
 
@@ -21,15 +13,15 @@ export const fetchAllData = async () => {
   let githubData = {};
 
   try {
-    githubData = await fetchGitHubData();
-  } catch (error) {
-    console.error('Error fetching GitHub data in fetchAllData:', error);
-  }
-
-  try {
     firebaseData = await fetchFirebaseData();
   } catch (error) {
     console.error('Error fetching Firebase data:', error);
+  }
+
+  try {
+    githubData = await fetchGitHubData();
+  } catch (error) {
+    console.error('Error fetching GitHub data:', error);
   }
 
   return {
@@ -55,34 +47,30 @@ const fetchFirebaseData = async () => {
 
 const fetchGitHubContent = async (path, isJson = true) => {
   try {
-    console.log(`Fetching from GitHub: ${path}`);
     const response = await octokit.repos.getContent({
       owner: REPO_OWNER,
       repo: REPO_NAME,
       path: path,
     });
-    const contentBase64 = response.data.content;
-    const contentDecoded = atob(contentBase64);
-
-    console.log('Raw Content:', contentDecoded);
-    return isJson ? JSON.parse(contentDecoded) : contentDecoded;
+    const content = atob(response.data.content);
+    return isJson ? JSON.parse(content) : content;
   } catch (error) {
     console.error(`Error fetching content from GitHub: ${path}`, error);
-    throw error;
+    return isJson ? [] : '';
   }
 };
 
 const fetchGitHubData = async () => {
   try {
     const [posts, projects] = await Promise.all([
-      fetchGitHubContent('src/content/posts.json'),
-      fetchGitHubContent('src/content/projects.json')
+      fetchGitHubContent('content/posts.json'),
+      fetchGitHubContent('content/projects.json')
     ]);
 
     return { posts, projects };
   } catch (error) {
     console.error('Error fetching GitHub data:', error);
-    throw error;
+    return { posts: [], projects: [] };
   }
 };
 
@@ -108,7 +96,7 @@ const fetchFirebaseNote = async (noteId) => {
 };
 
 const fetchGitHubPost = async (postId) => {
-  const posts = await fetchGitHubContent('src/content/posts.json');
+  const posts = await fetchGitHubContent('content/posts.json');
   const post = posts.find(p => p.id === postId);
   
   if (post) {

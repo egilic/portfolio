@@ -1,7 +1,7 @@
 import React, { createContext, useState, useEffect, useContext } from 'react';
 import { fetchAllData } from '../services/DataService';
 
-export const DataContext = createContext();
+const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
   const [data, setData] = useState({ notes: [], posts: [], projects: [] });
@@ -13,11 +13,10 @@ export const DataProvider = ({ children }) => {
       try {
         setLoading(true);
         const fetchedData = await fetchAllData();
-        console.log('Fetched Data:', fetchedData);
         setData(fetchedData);
       } catch (err) {
         console.error('Error fetching data:', err);
-        setError(err.message || 'Failed to fetch data');
+        setError(err.message);
       } finally {
         setLoading(false);
       }
@@ -33,10 +32,4 @@ export const DataProvider = ({ children }) => {
   );
 };
 
-export const useDataContext = () => {
-  const context = useContext(DataContext);
-  if (!context) {
-    throw new Error('useDataContext must be used within a DataProvider');
-  }
-  return context;
-};
+export const useDataContext = () => useContext(DataContext);
