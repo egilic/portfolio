@@ -1,15 +1,35 @@
-import React, { createContext, useState} from 'react';
+import React, { createContext, useState, useEffect, useContext } from 'react';
+import { fetchAllData } from '../services/DataService';
 
-export const DataContext = createContext();
+const DataContext = createContext();
 
 export const DataProvider = ({ children }) => {
-  const [data, setData] = useState(null);
+  const [data, setData] = useState({ notes: [], posts: [], projects: [] });
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  // Add any data fetching or state management logic here
-  const value = {
-    data,
-    setData,
-  };
+  useEffect(() => {
+    const loadData = async () => {
+      try {
+        setLoading(true);
+        const fetchedData = await fetchAllData();
+        setData(fetchedData);
+      } catch (err) {
+        console.error('Error fetching data:', err);
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
 
-  return <DataContext.Provider value={value}>{children}</DataContext.Provider>;
+    loadData();
+  }, []);
+
+  return (
+    <DataContext.Provider value={{ ...data, loading, error }}>
+      {children}
+    </DataContext.Provider>
+  );
 };
+
+export const useDataContext = () => useContext(DataContext);
