@@ -61,8 +61,11 @@ const fetchGitHubContent = async (path, isJson = true) => {
       repo: REPO_NAME,
       path: path,
     });
-    const content = atob(response.data.content);
-    return isJson ? JSON.parse(content) : content;
+    const contentBase64 = response.data.content;
+    const contentDecoded = atob(contentBase64);
+
+    console.log('Raw Content:', contentDecoded);
+    return isJson ? JSON.parse(contentDecoded) : contentDecoded;
   } catch (error) {
     console.error(`Error fetching content from GitHub: ${path}`, error);
     throw error;
@@ -105,7 +108,7 @@ const fetchFirebaseNote = async (noteId) => {
 };
 
 const fetchGitHubPost = async (postId) => {
-  const posts = await fetchGitHubContent('content/posts.json');
+  const posts = await fetchGitHubContent('src/content/posts.json');
   const post = posts.find(p => p.id === postId);
   
   if (post) {

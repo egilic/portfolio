@@ -1,0 +1,38 @@
+[
+    {
+      "id": "portfolio",
+      "title": "Personal Portfolio Website",
+      "description": "A modern, responsive portfolio website built with React and Tailwind CSS, featuring dynamic content loading from GitHub.",
+      "tags": ["React", "Tailwind CSS", "GitHub API", "Firebase"],
+      "demoLink": "https://your-portfolio-url.com",
+      "githubLink": "https://github.com/yourusername/portfolio",
+      "content": "src/content/projects/portfolio.md"
+    },
+    {
+      "id": "physics-simulation",
+      "title": "Physics Particle Simulation",
+      "description": "An interactive particle physics simulation that demonstrates fundamental physics concepts through visual representations.",
+      "tags": ["JavaScript", "Physics", "Canvas API", "Educational"],
+      "demoLink": "https://physics-sim-demo.com",
+      "githubLink": "https://github.com/yourusername/physics-simulation",
+      "content": "src/content/projects/physics-simulation.md"
+    },
+    {
+      "id": "ml-research",
+      "title": "Machine Learning Research Tool",
+      "description": "A tool that applies machine learning algorithms to analyze physics research data and identify patterns.",
+      "tags": ["Python", "TensorFlow", "Data Analysis", "Research"],
+      "demoLink": "https://ml-research-tool.com",
+      "githubLink": "https://github.com/yourusername/ml-research",
+      "content": "src/content/projects/ml-research.md"
+    },
+    {
+      "id": "note-taking-app",
+      "title": "Firebase Note-Taking Application",
+      "description": "A real-time collaborative note-taking application built with React and Firebase, supporting markdown and code snippets.",
+      "tags": ["React", "Firebase", "Real-time", "Markdown"],
+      "demoLink": "https://notes-app-demo.com",
+      "githubLink": "https://github.com/yourusername/notes-app",
+      "content": "src/content/projects/note-taking-app.md"
+    }
+  ]
