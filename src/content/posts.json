@@ -1,0 +1,26 @@
+[
+    {
+      "id": "physics-decline",
+      "title": "The Decline of Physics Studies",
+      "date": "2024-04-14",
+      "category": "Physics",
+      "summary": "An analysis of the declining interest in physics among undergraduate students and its implications for future research.",
+      "content": "src/content/posts/physics-decline.md"
+    },
+    {
+      "id": "rhet-105-paper",
+      "title": "Research Paper: RHET 105",
+      "date": "2024-04-04",
+      "category": "Misc",
+      "summary": "A reflection on writing a research paper for RHET 105 and discovering unexpected value in general education requirements.",
+      "content": "src/content/posts/rhet-105-paper.md"
+    },
+    {
+      "id": "ml-physics",
+      "title": "Machine Learning in Physics Research",
+      "date": "2024-03-28",
+      "category": "ML",
+      "summary": "Exploring the intersection of machine learning and physics research, with insights from recent applications.",
+      "content": "src/content/posts/ml-physics.md"
+    }
+  ]

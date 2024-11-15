@@ -21,15 +21,15 @@ export const fetchAllData = async () => {
   let githubData = {};
 
   try {
-    firebaseData = await fetchFirebaseData();
+    githubData = await fetchGitHubData();
   } catch (error) {
-    console.error('Error fetching Firebase data:', error);
+    console.error('Error fetching GitHub data in fetchAllData:', error);
   }
 
   try {
-    githubData = await fetchGitHubData();
+    firebaseData = await fetchFirebaseData();
   } catch (error) {
-    console.error('Error fetching GitHub data:', error);
+    console.error('Error fetching Firebase data:', error);
   }
 
   return {
@@ -55,6 +55,7 @@ const fetchFirebaseData = async () => {
 
 const fetchGitHubContent = async (path, isJson = true) => {
   try {
+    console.log(`Fetching from GitHub: ${path}`);
     const response = await octokit.repos.getContent({
       owner: REPO_OWNER,
       repo: REPO_NAME,
@@ -64,21 +65,21 @@ const fetchGitHubContent = async (path, isJson = true) => {
     return isJson ? JSON.parse(content) : content;
   } catch (error) {
     console.error(`Error fetching content from GitHub: ${path}`, error);
-    return isJson ? [] : '';
+    throw error;
   }
 };
 
 const fetchGitHubData = async () => {
   try {
     const [posts, projects] = await Promise.all([
-      fetchGitHubContent('content/posts.json'),
-      fetchGitHubContent('content/projects.json')
+      fetchGitHubContent('src/content/posts.json'),
+      fetchGitHubContent('src/content/projects.json')
     ]);
 
     return { posts, projects };
   } catch (error) {
     console.error('Error fetching GitHub data:', error);
-    return { posts: [], projects: [] };
+    throw error;
   }
 };
 
