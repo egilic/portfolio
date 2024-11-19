@@ -63,8 +63,8 @@ const fetchGitHubContent = async (path, isJson = true) => {
 const fetchGitHubData = async () => {
   try {
     const [posts, projects] = await Promise.all([
-      fetchGitHubContent('content/posts.json'),
-      fetchGitHubContent('content/projects.json')
+      fetchGitHubContent('src/content/posts.json'),
+      fetchGitHubContent('src/content/projects.json')
     ]);
 
     return { posts, projects };
@@ -96,7 +96,7 @@ const fetchFirebaseNote = async (noteId) => {
 };
 
 const fetchGitHubPost = async (postId) => {
-  const posts = await fetchGitHubContent('content/posts.json');
+  const posts = await fetchGitHubContent('src/content/posts.json');
   const post = posts.find(p => p.id === postId);
   
   if (post) {
