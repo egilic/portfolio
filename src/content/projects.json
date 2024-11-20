@@ -18,9 +18,22 @@
       "tags": ["Python", "TensorFlow", "Data Analysis", "Research"]
     },
     {
-      "id": "note-taking-app",
-      "title": "Firebase Note-Taking Application",
-      "description": "A real-time collaborative note-taking application built with React and Firebase, supporting markdown and code snippets.",
-      "tags": ["React", "Firebase", "Real-time", "Markdown"]
+      "id": "classifer",
+      "title": "Puppy Classifier",
+      "description": "Engineered deep learning models using CNNs and Vision Transformers to classify dog breeds, achieving ~88% accuracy. Enhanced model performance with transfer learning and advanced data preprocessing.",
+      "tags": ["Python", "Pytorch", "Pandas", "Sklearn"]
+    },
+    {
+      "id": "mortality",
+      "title": "ICU Mortality Prediction Model",
+      "description": "Engineering machine learning models to predict 30-day ICU mortality, handling complex time-stamped features. Improved model performance with mean imputation, L2-norm, and stratigied cross-validation and hyperparameter tuning.",
+      "tags": ["Python", "Numpy", "Pandas", "Sklearn"]
+    },
+    {
+      "id": "library",
+      "title": "Thread Library",
+      "description": "Led team in implementation of C++ thread library, optimizing CPU scheduling and suspensions. Utilized Linux swapcontexts to enhance efficiency by eliminating excess swapcontexts. Designed multicore test cases to valdiate mutex, condition variable, thread, and cpu efficiency.",
+      "tags": ["C++", "gCov", "Valgrind", "GDB"]
+
     }
   ]
