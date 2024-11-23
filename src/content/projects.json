@@ -1,0 +1,39 @@
+[
+    {
+      "id": "portfolio",
+      "title": "Personal Portfolio Website",
+      "description": "A modern, responsive portfolio website built with React and Tailwind CSS, featuring dynamic content loading from GitHub.",
+      "tags": ["React", "Tailwind CSS", "GitHub API", "Firebase"]
+    },
+    {
+      "id": "physics-simulation",
+      "title": "Physics Particle Simulation",
+      "description": "An interactive particle physics simulation that demonstrates fundamental physics concepts through visual representations.",
+      "tags": ["JavaScript", "Physics", "Canvas API", "Educational"]
+    },
+    {
+      "id": "ml-research",
+      "title": "Machine Learning Research Tool",
+      "description": "A tool that applies machine learning algorithms to analyze physics research data and identify patterns.",
+      "tags": ["Python", "TensorFlow", "Data Analysis", "Research"]
+    },
+    {
+      "id": "classifer",
+      "title": "Puppy Classifier",
+      "description": "Engineered deep learning models using CNNs and Vision Transformers to classify dog breeds, achieving ~88% accuracy. Enhanced model performance with transfer learning and advanced data preprocessing.",
+      "tags": ["Python", "Pytorch", "Pandas", "Sklearn"]
+    },
+    {
+      "id": "mortality",
+      "title": "ICU Mortality Prediction Model",
+      "description": "Engineering machine learning models to predict 30-day ICU mortality, handling complex time-stamped features. Improved model performance with mean imputation, L2-norm, and stratigied cross-validation and hyperparameter tuning.",
+      "tags": ["Python", "Numpy", "Pandas", "Sklearn"]
+    },
+    {
+      "id": "library",
+      "title": "Thread Library",
+      "description": "Led team in implementation of C++ thread library, optimizing CPU scheduling and suspensions. Utilized Linux swapcontexts to enhance efficiency by eliminating excess swapcontexts. Designed multicore test cases to valdiate mutex, condition variable, thread, and cpu efficiency.",
+      "tags": ["C++", "gCov", "Valgrind", "GDB"]
+
+    }
+  ]

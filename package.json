@@ -1,5 +1,74 @@
 {
+<<<<<<< HEAD
   "dependencies": {
     "firebase": "^11.0.2"
+=======
+  "name": "edin",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@headlessui/react": "^2.1.2",
+    "@heroicons/react": "^2.1.5",
+    "@octokit/rest": "^21.0.2",
+    "@radix-ui/react-tabs": "^1.1.0",
+    "@react-pdf/renderer": "^3.4.4",
+    "@testing-library/jest-dom": "^5.17.0",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^13.5.0",
+    "aws-sdk": "^2.1659.0",
+    "clsx": "^2.1.1",
+    "firebase": "^10.14.1",
+    "firebaseui": "^6.1.0",
+    "github-markdown-css": "^5.8.0",
+    "hast-util-sanitize": "^5.0.2",
+    "pdfjs-dist": "^4.4.168",
+    "prismjs": "^1.29.0",
+    "react": "^18.3.1",
+    "react-copy-to-clipboard": "^5.1.0",
+    "react-dom": "^18.3.1",
+    "react-force-graph": "^1.44.4",
+    "react-force-graph-3d": "^1.24.3",
+    "react-markdown": "^9.0.1",
+    "react-pdf": "^9.1.0",
+    "react-router-dom": "^6.24.1",
+    "react-scripts": "5.0.1",
+    "react-syntax-highlighter": "^15.6.1",
+    "remark-gfm": "^4.0.0",
+    "remark-parse": "^11.0.0",
+    "remark-react": "^9.0.1",
+    "tailwind-merge": "^2.4.0",
+    "three": "^0.166.1",
+    "web-vitals": "^2.1.4"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@tailwindcss/typography": "^0.5.13",
+    "autoprefixer": "^10.4.19",
+    "postcss": "^8.4.39",
+    "tailwindcss": "^3.4.4"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+>>>>>>> 33991f1875c9e046ce80d76c7f73ea2f3d013217
   }
 }
