@@ -1,6 +1,6 @@
 # Machine Learning in Physics Research
 
-The intersection of machine learning and physics represents one of the most exciting frontiers in modern science. This post explores how ML is transforming physics research and opening new possibilities for discovery.
+In my opinion, the intersection of machine learning and physics represents one of the most exciting frontiers in modern science. This post explores how ML is transforming physics research and opening new possibilities for discovery.
 
 ## Current Applications
 
