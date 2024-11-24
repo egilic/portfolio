@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "dependencies": {
-    "firebase": "^11.0.2"
-=======
   "name": "edin",
   "version": "0.1.0",
   "private": true,
@@ -69,6 +65,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
->>>>>>> 33991f1875c9e046ce80d76c7f73ea2f3d013217
   }
 }
