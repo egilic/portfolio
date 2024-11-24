@@ -5,7 +5,7 @@
       "date": "2024-04-14",
       "category": "Physics",
       "summary": "An analysis of the declining interest in physics among undergraduate students and its implications for future research.",
-      "content": "content/posts/physics-decline.md"
+      "content": "src/content/posts/physics-decline.md"
 
     },
     {
@@ -21,7 +21,7 @@
       "date": "2024-03-28",
       "category": "ML",
       "summary": "Exploring the intersection of machine learning and physics research, with insights from recent applications.",
-      "content": "content/posts/ml-physics.md"
+      "content": "src/content/posts/ml-physics.md"
     }
   ]
 

@@ -3,7 +3,6 @@ import { getDatabase, ref, get } from "firebase/database";
 import { database } from '../firebase';
 
 const octokit = new Octokit({ auth: process.env.REACT_APP_GIT_API });
-const db = getDatabase();
 
 const REPO_OWNER = process.env.REACT_APP_GIT_REPO_OWNER;
 const REPO_NAME = process.env.REACT_APP_GIT_REPO_NAME;
