@@ -1,8 +1,17 @@
 [
     {
+      "id": "ml-intro-one",
+      "title": "Intro to Machine Learning",
+      "date": "2024-11-24",
+      "category": "ML",
+      "summary": "This is the first post of a series I am adding to my website called Intro to Machine Learning.",
+      "content": "src/content/posts/ml-intro-one.md"
+
+    },
+    {
       "id": "physics-decline",
       "title": "The Decline of Physics Studies",
-      "date": "2024-04-14",
+      "date": "2024-06-14",
       "category": "Physics",
       "summary": "An analysis of the declining interest in physics among undergraduate students and its implications for future research.",
       "content": "src/content/posts/physics-decline.md"
@@ -11,14 +20,14 @@
     {
       "id": "attention-paper",
       "title": "Research Paper: Attention Is All You Need",
-      "date": "2024-04-04",
+      "date": "2024-10-04",
       "category": "Misc",
       "summary": "A reflection on reading a machine learning research paper and discovering unexpected value in general education requirements."
     },
     {
       "id": "ml-physics",
       "title": "Machine Learning in Physics Research",
-      "date": "2024-03-28",
+      "date": "2024-08-28",
       "category": "ML",
       "summary": "Exploring the intersection of machine learning and physics research, with insights from recent applications.",
       "content": "src/content/posts/ml-physics.md"

@@ -59,7 +59,7 @@ const About = () => {
         <h2 className="text-2xl font-bold mb-4">Education</h2>
         <div>
           <h3 className="text-xl font-semibold">University of Michigan, Ann Arbor</h3>
-          <p className="text-sm text-text-secondary">2021 - 2025</p>
+          <p className="text-sm text-text-secondary">2021 - 2026</p>
           <p className="mt-2">
             Studying B.S.E in Computer Science from the College of Engineering, B.B.A from the Stephen M. Ross School of Business, Minor in Physics.
           </p>
